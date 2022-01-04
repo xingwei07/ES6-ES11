@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>await 表达式</title>
+</head>
+
+<body>
+
+  <script>
+    // 创建 Promise 对象
+    const p = new Promise((resolve, reject) => {
+      // resolve('用户数据');
+      reject('失败了');
+    })
+
+    // await 要放在 async 函数中
+    async function main() {
+      try {
+        let result = await p;
+        console.log(result); // 用户数据
+      } catch (e) {
+        console.warn(e); // 失败了
+      }
+    }
+
+    main();
+  </script>
+</body>
+
+</html>

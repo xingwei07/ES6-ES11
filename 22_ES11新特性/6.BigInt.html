@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>BigInt</title>
+</head>
+
+<body>
+
+  <script>
+    // 大整形
+    // let n = 521n;
+    // console.log(n); // 521n
+
+    // // 函数
+    // let n = 123;
+    // console.log(n); // 123
+    // console.log(BigInt(n)); // 123n
+
+    // 大数值运算
+    let max = Number.MAX_SAFE_INTEGER;
+    console.log(max); // 9007199254740991
+    console.log(max + 1); // 9007199254740992
+    console.log(max + 2); // 9007199254740992
+
+    console.log(BigInt(max)); // 9007199254741n
+    console.log(BigInt(max) + BigInt(1)); // 9007199254742n
+    console.log(BigInt(max) + BigInt(2)); // 9007199254743n
+
+  </script>
+</body>
+
+</html>

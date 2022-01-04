@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>let关键字</title>
+</head>
+
+<body>
+
+  <script>
+    // 声明变量
+    let a;
+    let b, c, d;
+    let e = 100;
+    let f = 521, g = 'live', h = [];
+
+    // 1. 变量不能重复声明
+    // let star = '罗志祥';
+    // let star = ’小猪;
+
+    // 2. 块级作用域  全局， 函数， eval
+    // if else while for
+    {
+      var girl = '小红';
+    }
+    console.log(girl) // 小红
+    // {
+    //   let girl = '小红';
+    // }
+    // console.log(girl) // 报错
+
+    // 3. 不存在变量提升
+    console.log(song) // undefined
+    var song = '恋爱'
+
+    // console.log(sas) // 报错
+    // let sas = 'love'
+
+    // 不影响作用域链
+    {
+      let school = '尚硅谷';
+      function fn() {
+        console.log(school)
+      }
+      fn();
+    }
+  </script>
+</body>
+
+</html>

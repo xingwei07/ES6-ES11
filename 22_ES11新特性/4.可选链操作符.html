@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    function main(config) {
+      /* const dbHost = config && config.db && config.db.host;
+
+      console.log(dbHost); // localhost */
+
+      const dbHost = config?.config.db?.host;
+
+      console.log(dbHost); // localhost
+    }
+
+    main({
+      db: {
+        host: 'localhost',
+        username: 'root'
+      },
+      catch: {
+        host: 'localhost',
+        username: 'root'
+      }
+    })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>字符串扩展</title>
+</head>
+
+<body>
+  <script>
+    let str = `
+        <ul>
+          <li>
+            <a>肖申克的救赎</a>
+            <p>上映日期：1994-09-10</p>
+          </li>
+          <li>
+            <a>阿甘正传</a>
+            <p>上映日期：1994-07-06</p>
+          </li>
+        </ul>
+      `
+
+    // 声明正则
+    const reg = /<li>.*?<a>(.*?)<\/a>.*?<p>(.*?)<\/p>/gs
+    const result = str.matchAll(reg)
+
+    /* for (v of result) {
+      console.log(v[1]); // 肖申克的救赎            阿甘正传
+      console.log(v[2]); // 上映日期：1994-09-10   上映日期：1994-07-06
+    } */
+
+    const res = [...result]
+    console.log(res); // [Array(3), Array(3)]
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>类继承</title>
+</head>
+
+<body>
+  <script>
+    class Phone {
+      constructor(brand, price) {
+        this.brand = brand;
+        this.price = price;
+      }
+      call() {
+        console.log('我可以改变世界')
+      }
+    }
+
+    class SmartPhone extends Phone {
+      constructor(brand, price, color, size) {
+        super(brand, price);
+        this.color = color;
+        this.size = size;
+      }
+      game() {
+        console.log('我可以打游戏')
+      }
+      photo() {
+        console.log('我可以拍照')
+      }
+      call() {
+        console.log('我可以视频通话')
+      }
+    }
+
+    const huaWei = new SmartPhone('华为', 4999, 'black', '5.5inch');
+    huaWei.call() // 我可以视频通话
+    console.log(huaWei)
+  </script>
+</body>
+
+</html>

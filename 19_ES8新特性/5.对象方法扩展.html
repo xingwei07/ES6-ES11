@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>对象方法扩展</title>
+</head>
+
+<body>
+
+  <script>
+    const school = {
+      name: '尚硅谷',
+      cities: ['北京', '上海', '深圳'],
+      xueke: ['前段', 'Vue', 'Axios', 'Java']
+    }
+    // 获取对象所有的键
+    console.log(Object.keys(school)) // ["name","cities","xueke"]
+
+    // 获取对象所有的值
+    console.log(Object.values(school)) // ['尚硅谷', ['北京', '上海', '深圳'], ['前段', 'Vue', 'Axios', 'Java']]
+
+    // entries 将对象转换为键值对数组
+    console.log(Object.entries(school)) // [['name', '尚硅谷'], ['cities', Array(3)], ['xueke', Array(4)]]
+    // 创建 Map
+    const m = new Map(Object.entries(school)); // {'name' => '尚硅谷', 'cities' => Array(3), 'xueke' => Array(4)}
+    console.log(m)
+
+    // 对象属性的描述对象
+    console.log(Object.getOwnPropertyDescriptors(school))
+  </script>
+</body>
+
+</html>

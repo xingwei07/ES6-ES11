@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>点击切换颜色</title>
+  <style>
+    .item {
+      width: 80px;
+      height: 80px;
+      border: 1px solid black;
+      float: left;
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h3>点击切换颜色</h3>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+
+  <script>
+    let item = document.getElementsByClassName('item');
+
+    /* for (var i = 0; i < item.length; i++) {
+      item[i].onclick = function () {
+        // this.style.backgroundColor = 'pink'
+        item[i].style.backgroundColor = 'pink' // 报错 item[3]
+      }
+    }
+
+    // i为全局变量，此时已经为 3，执行点击事件时为item[3]
+    console.log(i) // 3
+     */
+    for (let i = 0; i < item.length; i++) {
+      item[i].onclick = function () {
+        item[i].style.backgroundColor = 'pink'
+      }
+    }
+    /*
+    // 块级作用域
+    {
+      let i = 0;
+      function() {
+        item[i]
+      }
+    }
+    {
+      let i = 2;
+      function() {
+        item[i]
+      }
+    }
+    {
+      let i = 3;
+      function() {
+        item[i]
+      }
+    }
+    */
+
+
+  </script>
+</body>
+
+</html>

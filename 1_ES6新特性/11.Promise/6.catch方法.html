@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>catch 方法</title>
+</head>
+
+<body>
+  <script>
+    const p = new Promise(function (resolve, reject) {
+      reject('error');
+    })
+
+    /* p.then((value) => { }, (reason) => {
+      console.error(reason);
+    }) */
+
+    p.catch((reason) => {
+      console.error(reason);
+    })
+  </script>
+</body>
+
+</html>

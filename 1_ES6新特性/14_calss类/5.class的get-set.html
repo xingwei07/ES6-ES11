@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>class的get-set</title>
+</head>
+
+<body>
+  <script>
+    // get 和 set 
+    class Phone {
+      get price() {
+        console.log('price被读取了')
+      }
+
+      set price(newValue) {
+        console.log('price被修改了')
+      }
+    }
+
+    // 实例化对象
+    const huaWei = new Phone();
+
+    console.log(huaWei.price)
+    huaWei.price = 3999
+  </script>
+</body>
+
+</html>

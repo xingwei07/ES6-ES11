@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>生成器</title>
+</head>
+
+<body>
+
+  <script>
+    // 生成器其实就是一个特殊的函数
+    // 异步编程  纯回调函数   node  fi  ajax  mongodb
+    // function* gen() {
+    //   console.log(111);
+    // }
+
+    // let iterator = gen();
+    // iterator.next(); // 必须通过next()调用
+
+    /* // 函数代码的分隔符  将程序分为四个代码块
+    function* gen() {
+      console.log(111);
+      yield '一直没有耳朵';
+      console.log(222)
+      yield '一直没有尾巴';
+      console.log(333)
+      yield '真奇怪';
+      console.log(444)
+    }
+
+    let iterator = gen();
+    iterator.next(); //  111
+    iterator.next(); //  222
+    iterator.next(); //  333
+    iterator.next(); //  444 */
+
+
+    /* // 遍历
+    function* gen() {
+      yield '一直没有耳朵';
+      yield '一直没有尾巴';
+      yield '真奇怪';
+    }
+
+    for (v of gen()) {
+      console.log(v) // 一直没有耳朵  一直没有尾巴  真奇怪
+    } */
+
+    // next()
+    function* gen() {
+      yield '一直没有耳朵';
+      yield '一直没有尾巴';
+      yield '真奇怪';
+    }
+
+    let iterator = gen();
+    console.log(iterator.next()); // {value: '一直没有耳朵', done: false}
+    console.log(iterator.next()); // {value: '一直没有尾巴', done: false}
+    console.log(iterator.next()); // {value: '真奇怪', done: false}
+    console.log(iterator.next()); // {value: undefined, done: true}
+  </script>
+</body>
+
+</html>

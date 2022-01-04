@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Set 综合实践</title>
+  <script src="../../resources/jquery.js"></script>
+</head>
+
+<body>
+
+  <script>
+    let arr = [1, 2, 3, 4, 5, 4, 3, 2, 1];
+
+    /* // 1.数组去重
+    let result = [...new Set(arr)];
+    console.log(result); // 1, 2, 3, 4, 5 */
+
+    // 2.交集
+    let arr2 = [4, 5, 6, 5, 6];
+    // let result = [...new Set(arr)].filter(item => {
+    //   return (new Set(arr2)).has(item)
+    // })
+    // console.log(result); // 4, 5
+
+    // 3.并集
+    // let union = [...new Set([...arr, ...arr2])];
+    // console.log(union)
+
+    // 4.差集
+    const diff = [...new Set(arr)].filter(item => {
+      return !((new Set(arr2)).has(item))
+    })
+    console.log(diff)
+  </script>
+</body>
+
+</html>

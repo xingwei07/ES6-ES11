@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>集合</title>
+</head>
+
+<body>
+
+  <script>
+    // 声明一个 set
+    let s = new Set();
+    // 赋初始值 自动去重
+    let s2 = new Set(['大事儿', '小事儿', '天下事儿', '天下事儿']);
+
+    // 元素个数
+    console.log(s2.size)
+
+    // 添加新元素
+    s2.add('喜事儿')
+
+    // 删除元素
+    s2.delete('大事儿')
+
+    // 检测
+    console.log(s2.has('小事儿'))
+    console.log(s2.has('坏事儿'))
+
+    /* // 清空元素
+    s2.clear() */
+
+    // console.log(s2)
+
+    // 遍历元素
+    for (v of s2) {
+      console.log(v)
+    }
+  </script>
+</body>
+
+</html>

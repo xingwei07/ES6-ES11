@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>symbol</title>
+</head>
+
+<body>
+
+  <script>
+    // 创建Symbol 得到的Symbol是唯一的
+    let s = Symbol();
+    console.log(s, typeof s); // Symbol() 'symbol'
+
+    let s2 = Symbol('尚硅谷');
+    let s3 = Symbol('尚硅谷');
+    console.log(s2 === s3); //false
+
+    // Sysbol.for 创建 得到的Symbol是一样的
+    let s4 = Symbol.for('尚硅谷');
+    let s5 = Symbol.for('尚硅谷');
+    console.log(s4 === s5); // true
+
+    // 不能与其他数据进行运算
+    // let result = s + 100; // 报错
+    // let result = s > 100; // 报错
+    // let result = s + '100';  // 报错
+
+    // 七中基本数据类型
+    // USONB
+    // U undefined
+    // S string symbol
+    // O object
+    // N null number
+    // B boolean
+  </script>
+</body>
+
+</html>
