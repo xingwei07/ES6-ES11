@@ -9,7 +9,7 @@ fs.readFile('../../resources/2.test.txt', (err, data) => {
 
 // 使用 Promise 读取文件
 const p = new Promise(function (resolve, reject) {
-  fs.readFile('../../resources/2.test.txt', (err, data) => {
+  fs.readFile('../../resources/为学.txt', (err, data) => {
     if (err) reject(err);
     resolve(data);
   })
